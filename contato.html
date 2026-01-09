@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contato — Portal Jurídico Fátima Felippe</title>
+  <meta name="description" content="Fale com a equipe do Portal Jurídico Fátima Felippe. Dúvidas, sugestões e colaborações — contato por e-mail e telefone." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://fatimafelipe.com.br/contato.html" />
+  <style>
+    /* Reset básico */
+    :root{
+      --accent:#0b74da;
+      --muted:#6b7280;
+      --bg:#f6f7f9;
+      --card:#ffffff;
+      --maxwidth:1200px;
+      --success:#10b981;
+      --warning:#f59e0b;
+      --error:#ef4444;
+      font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;background:var(--bg);color:#111}
+    a{color:var(--accent);text-decoration:none}
+    header{background:#fff;border-bottom:1px solid #e6e9ee}
+    .container{max-width:var(--maxwidth);margin:0 auto;padding:18px}
+
+    /* Top bar */
+    .topbar{display:flex;align-items:center;gap:16px;justify-content:space-between}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{width:48px;height:48px;background:linear-gradient(135deg,var(--accent),#3b82f6);border-radius:8px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700}
+    nav.main-nav{display:flex;gap:14px;align-items:center}
+    .search{display:flex;gap:8px;align-items:center}
+    .search input{padding:8px 12px;border:1px solid #d1d5db;border-radius:6px;width:220px}
+
+    /* Brand and footer helper classes (moved from inline attributes) */
+    .brand-title{font-weight:700}
+    .brand-sub{font-size:13px;color:var(--muted)}
+    .footer-credit{margin-top:8px;display:block}
+    .footer-images{margin-top:6px;display:block;color:var(--muted)}
+
+    /* Menu Hamburger para Mobile */
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 30px;
+      height: 21px;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      z-index: 10;
+    }
+
+    .menu-toggle span {
+      display: block;
+      height: 3px;
+      width: 100%;
+      background-color: var(--accent);
+      border-radius: 3px;
+      transition: all 0.3s ease;
+    }
+
+    .menu-toggle.active span:nth-child(1) {
+      transform: translateY(9px) rotate(45deg);
+    }
+
+    .menu-toggle.active span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .menu-toggle.active span:nth-child(3) {
+      transform: translateY(-9px) rotate(-45deg);
+    }
+
+    /* Forms */
+    .form-group{margin-bottom:16px}
+    .form-group label{display:block;margin-bottom:6px;font-weight:600}
+    .form-control{width:100%;padding:10px 12px;border:1px solid #d1d5db;border-radius:6px;font-size:14px}
+    textarea.form-control{min-height:120px;resize:vertical}
+    .form-row{display:flex;gap:12px}
+    .form-row .form-group{flex:1}
+
+    /* Widget */
+    .widget{background:var(--card);padding:14px;border-radius:10px;margin-bottom:12px}
+    .widget h4{margin:0 0 10px}
+
+    /* Botões */
+    .btn {
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: inline-block;
+      padding: 8px 12px;
+      border-radius: 8px;
+      border: 1px solid #e6e9ee;
+      background: #fff;
+    }
+    .btn.primary {
+      background: var(--accent);
+      color: #fff;
+      border-color: transparent
+    }
+    .btn.active {
+      background: var(--accent);
+      color: #fff;
+      border-color: transparent
+    }
+    .btn:disabled {
+      opacity: 0.5;
+      cursor: not-allowed
+    }
+
+    /* Alert */
+    .alert{padding:12px 16px;border-radius:8px;margin-bottom:16px}
+    .alert.success{background:#d1fae5;color:#065f46;border:1px solid #a7f3d0}
+    .alert.error{background:#fee2e2;color:#991b1b;border:1px solid #fca5a5}
+    .alert.warning{background:#fef3c7;color:#92400e;border:1px solid #fcd34d}
+
+    /* Footer */
+    footer{padding:22px 0;color:var(--muted);font-size:14px}
+
+    /* Página de contato */
+    .contact-page {
+      padding: 40px 0;
+    }
+    .contact-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .contact-header h1 {
+      font-size: 36px;
+      margin-bottom: 10px;
+      color: #111;
+    }
+    .contact-header p {
+      color: var(--muted);
+      font-size: 18px;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .contact-content {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 30px;
+      justify-content: center;
+    }
+    .contact-form {
+      background: var(--card);
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(15,23,42,0.06);
+    }
+    .contact-form h2 {
+      margin-top: 0;
+      margin-bottom: 20px;
+      font-size: 24px;
+    }
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      max-width: 720px;
+      width: 100%;
+      margin: 0 auto;
+    }
+    .info-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+    }
+    .widget{width:100%;}
+    .info-icon {
+      width: 40px;
+      height: 40px;
+      background: #e6f2ff;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent);
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+    .info-content h3 {
+      margin: 0 0 5px;
+      font-size: 18px;
+    }
+    .info-content p {
+      margin: 0;
+      color: var(--muted);
+    }
+    .social-links {
+      display: flex;
+      gap: 10px;
+      margin-top: 10px;
+    }
+    .social-links .btn {
+      flex: 1;
+      text-align: center;
+    }
+
+    /* Responsive */
+    @media (max-width:900px){
+      .contact-content {
+        grid-template-columns: 1fr;
+      }
+
+      .search input {
+        width: 120px;
+      }
+
+      /* Menu responsivo para mobile */
+      .menu-toggle {
+        display: flex;
+      }
+
+      nav.main-nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        max-width: 300px;
+        height: 100vh;
+        background: white;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 80px 20px 20px;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+        transition: right 0.3s ease;
+        z-index: 9;
+        gap: 0;
+      }
+
+      nav.main-nav.active {
+        right: 0;
+      }
+
+      nav.main-nav a {
+        width: 100%;
+        padding: 12px 0;
+        border-bottom: 1px solid #f0f0f0;
+        font-size: 16px;
+      }
+
+      .search {
+        margin-top: 20px;
+        width: 100%;
+      }
+
+      .search input {
+        width: 100%;
+      }
+
+      .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        display: none;
+        z-index: 8;
+      }
+
+      .overlay.active {
+        display: block;
+      }
+
+      .topbar {
+        flex-wrap: wrap;
+      }
+
+      .form-row {
+        flex-direction: column;
+      }
+    }
+
+    @media (max-width:768px){
+      .contact-header h1{font-size:28px}
+      .contact-header p{font-size:16px}
+      .contact-form{padding:20px}
+    }
+  </style>
+</head>
+<body>
+  <!-- Header principal -->
+  <header id="mainHeader">
+    <div class="container topbar">
+      <div class="brand">
+        <div class="logo">FF</div>
+        <div>
+          <div class="brand-title">Fatima Felippe</div>
+          <div class="brand-sub">Artigos, reflexões e notícias</div>
+        </div>
+      </div>
+
+      <!-- Botão do menu hamburger -->
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="main-nav" id="mainNav" aria-label="menu">
+        <a href="index.html" >Home</a>
+        <a href="index.html#postsContainer">Artigos</a>
+        <a href="index.html#reflexoesContainer">Reflexões</a>
+        <a href="index.html#noticiasContainer">Notícias</a>
+        <a href="contato.html" style="color:var(--accent);font-weight:600">Contato</a>
+        <a href="sobre.html">Sobre</a>
+
+        <div class="search">
+          <input type="search" placeholder="Pesquisar" id="searchBox" />
+          <button class="btn" onclick="doSearch()">Ir</button>
+        </div>
+      </nav>
+
+      <!-- Overlay para fechar o menu ao clicar fora -->
+      <div class="overlay" id="overlay"></div>
+    </div>
+  </header>
+
+  <!-- Página de Contato -->
+  <main class="contact-page">
+    <div class="container">
+      <div class="contact-header">
+        <h1>Entre em Contato</h1>
+        <p>Tem alguma dúvida, sugestão ou deseja colaborar com nosso portal? Entre em contato conosco!</p>
+      </div>
+
+      <div class="contact-content">
+        
+        <div class="contact-info">
+          <div class="widget">
+            <h4>Informações de Contato</h4>
+            <div class="info-item">
+              <div class="info-icon">✉️</div>
+              <div class="info-content">
+                <h3>Email</h3>
+                <p>Fatimafelippe.adv@gmail.com</p>
+              </div>
+            </div>
+            <div class="info-item">
+              <div class="info-icon">📞</div>
+              <div class="info-content">
+                <h3>Telefone</h3>
+                <p>(48) 99802-1460</p>
+              </div>
+            </div>
+            
+          </div>
+          
+          <div class="widget">
+            <h4>Redes Sociais</h4>
+            <p>Siga-nos nas redes sociais para ficar por dentro das novidades:</p>
+            <div class="social-links">
+              <a href="https://www.instagram.com/fatimafelippe7?utm_source=qr&igsh=ZTUyeDhwcjlsem5h" class="btn">Instagram</a>
+              <!-- <a href="#" class="btn">Twitter</a>
+              <a href="#" class="btn">LinkedIn</a> -->
+            </div>
+          </div>
+          
+          <!-- <div class="widget">
+            <h4>Horário de Atendimento</h4>
+            <p>Segunda a sexta: 9h às 18h<br>
+            Sábado: 9h às 12h<br>
+            Domingo: Fechado</p>
+          </div> -->
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+        <div>
+          <strong>Portal Jurídico</strong><br>
+          <small>© 2025 — Todos os direitos reservados.</small><br>
+          <small class="footer-credit">Desenvolvido por <a href="https://www.linkedin.com/in/guilherme-rocha-oliveira-3942481a2/" target="_blank" style="color:var(--accent);text-decoration:none">@Guilherme Rocha Oliveira</a></small>
+          <small class="footer-images">Imagens por <a href="https://www.freepik.com" target="_blank" style="color:var(--accent);text-decoration:none">Freepik</a></small>
+        </div>
+        <div style="color:var(--muted)">
+          <a href="privacidade.html">Política de Privacidade</a> 
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Elementos DOM
+    const contactForm = document.getElementById('contactForm');
+    
+    // Funções para menu mobile
+    function toggleMobileMenu(show) {
+      const menuToggle = document.getElementById('menuToggle');
+      const mainNav = document.getElementById('mainNav');
+      const overlay = document.getElementById('overlay');
+
+      if (show === undefined) {
+        show = !mainNav.classList.contains('active');
+      }
+
+      if (show) {
+        mainNav.classList.add('active');
+        menuToggle.classList.add('active');
+        overlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      } else {
+        mainNav.classList.remove('active');
+        menuToggle.classList.remove('active');
+        overlay.classList.remove('active');
+        document.body.style.overflow = 'auto';
+      }
+    }
+
+    // Função de pesquisa
+    function doSearch() {
+      const q = document.getElementById('searchBox').value.trim();
+      if (!q) { alert('Digite algo para pesquisar'); return }
+      alert('Pesquisa simulada: "' + q + '" — implementar busca no backend.');
+
+      // Fechar menu mobile após pesquisa
+      toggleMobileMenu(false);
+    }
+    
+    // Inicialização
+    document.addEventListener('DOMContentLoaded', function() {
+      setupEventListeners();
+    });
+    
+    // Configurar event listeners (form + menu mobile)
+    function setupEventListeners() {
+      // Formulário de contato
+      if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+          e.preventDefault();
+
+          const name = document.getElementById('contactName').value.trim();
+          const email = document.getElementById('contactEmail').value.trim();
+          const subject = document.getElementById('contactSubject').value.trim();
+          const message = document.getElementById('contactMessage').value.trim();
+
+          if (name && email && subject && message) {
+            // Simulação de envio (em produção, enviar para backend)
+            showAlert('Mensagem enviada com sucesso! Entraremos em contato em breve.', 'success');
+            contactForm.reset();
+          } else {
+            showAlert('Por favor, preencha todos os campos.', 'error');
+          }
+        });
+      }
+
+      // Menu mobile
+      const menuToggle = document.getElementById('menuToggle');
+      const mainNav = document.getElementById('mainNav');
+      const overlay = document.getElementById('overlay');
+
+      if (menuToggle) menuToggle.addEventListener('click', () => toggleMobileMenu());
+      if (overlay) overlay.addEventListener('click', () => toggleMobileMenu(false));
+
+      // Fechar menu ao clicar em um link
+      if (mainNav) mainNav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', (e) => {
+          const href = link.getAttribute('href') || '';
+          if (href.startsWith('#') && href.length > 1) {
+            e.preventDefault();
+            const id = href.substring(1);
+            const target = document.getElementById(id);
+            if (target) {
+              target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+          }
+          // Fechar o menu mobile em qualquer clique no link
+          toggleMobileMenu(false);
+        });
+      });
+    }
+    
+    // Mostrar alerta
+    function showAlert(message, type) {
+      // Remover alertas existentes
+      document.querySelectorAll('.alert').forEach(alert => alert.remove());
+      
+      const alert = document.createElement('div');
+      alert.className = `alert ${type}`;
+      alert.textContent = message;
+      alert.style.position = 'fixed';
+      alert.style.top = '20px';
+      alert.style.right = '20px';
+      alert.style.zIndex = '1001';
+      alert.style.maxWidth = '300px';
+      
+      document.body.appendChild(alert);
+      
+      setTimeout(() => {
+        alert.remove();
+      }, 5000);
+    }
+  </script>
+</body>
+</html>

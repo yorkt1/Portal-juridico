@@ -1,0 +1,9 @@
+User-agent: *
+Disallow:
+
+# Point to sitemap
+Sitemap: https://fatimafelipe.com.br/sitemap.xml
+
+# Allow Googlebot to access JS/CSS
+User-agent: Googlebot
+Allow: /
