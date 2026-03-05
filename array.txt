@@ -1,0 +1,13 @@
+ {
+        "id": 333,
+        "category": "civil",
+        "categoryName": "Direito Civil",
+        "date": "25 de agosto de 2025",
+        "readTime": "10 min de leitura",
+        "title": "Curatela: Instrumento de Proteção e Cuidado no Ordenamento Jurídico Brasileiro",
+        "excerpt": "Análise do instrumento da curatela como forma de proteção da pessoa com incapacidade.",
+        "image": "https://res.cloudinary.com/dqewxdbfx/image/upload/v1762624801/maos-dadas-umas-as-outras-para-apoio_page-0001_n0v2bn.jpg",
+        "author": "Redação",
+        "content": ``,
+        "tags": ["Introdução", "Importância", "Constituição Federal/88", "Lei nº 10.406/2002", "Lei nº 13.105/2015", "Lei nº 13.146/2015", "Outros"]
+      },
