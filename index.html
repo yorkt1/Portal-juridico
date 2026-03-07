@@ -555,15 +555,18 @@
       grid-template-columns: 1fr 1fr;
       gap: 40px;
       align-items: center;
+      justify-content: center;
       position: relative;
       z-index: 2;
+      min-height: 450px;
     }
 
     .hero-image {
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 500px;
+      height: 100%;
+      min-height: 350px;
       position: relative;
     }
 
@@ -591,6 +594,11 @@
 
     .hero-text {
       padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
     }
 
     .hero-text h2 {
@@ -811,16 +819,26 @@
         grid-template-columns: 1fr;
         gap: 30px;
         text-align: center;
+        justify-items: center;
       }
 
       .hero-image {
-        height: 400px;
+        height: 320px;
         order: -1;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+      }
+
+      .hero-text {
+        align-items: center;
+        justify-content: center;
+        text-align: center;
       }
 
       .frame-rectangular {
         max-width: 350px;
-        height: 380px;
+        height: 280px;
       }
     }
 
