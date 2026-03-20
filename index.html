@@ -506,7 +506,7 @@
       width: 100%;
       border-collapse: collapse;
       margin: 20px 0;
-      font-size: 15px;
+      font-size: 12px !important;
       line-height: 1.5;
     }
     
@@ -525,6 +525,24 @@
     .artigo table p {
       margin: 0;
       padding: 0;
+    }
+
+    @media (max-width: 768px) {
+      .artigo table {
+        font-size: 10px !important;
+      }
+      .artigo table td, .artigo table th {
+        padding: 3px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .artigo table {
+        font-size: 8px !important;
+      }
+      .artigo table td, .artigo table th {
+        padding: 2px;
+      }
     }
 
     .article-section h3 {
@@ -1177,12 +1195,7 @@
         <div class="widget">
           <h4>Mais lidos</h4>
           <ol style="padding-left:18px;margin:0">
-            <li><a href="#" onclick="openArticle(101, event)">INTELIGÊNCIA</a></li>
-            <li><a href="#" onclick="openArticle(102, event)">ORGANIZAÇÃO</a></li>
-            <li><a href="#" onclick="openArticle(103, event)">PENSAMENTOS</a></li>
-            <li><a href="#" onclick="openArticle(104, event)">RECIPROCIDADE</a></li>
-            <li><a href="#" onclick="openArticle(105, event)">TOLERÂNCIA</a></li>
-            <li><a href="#" onclick="openArticle(106, event)">MUDANÇA</a></li>
+            <!-- Conteúdo será preenchido dinamicamente -->
           </ol>
         </div>
       </aside>
@@ -1259,13 +1272,98 @@
     // Array de postagens com HTML formatado
 
     const reflexoes = [
+
+    {
+        "id": 106,
+        "category": "reflexoes",
+        "categoryName": "MUDANÇAS",
+        "date": "24 de janeiro de 2026",
+        "readTime": "10 min de leitura",
+        "title": "Mudanças",
+        "excerpt": " Reflexão sobre a importância de entender a mudança quando necessária como um meio para aprender e se desenvolver recomeçando com mais sabedoria.",
+        "image": "https://res.cloudinary.com/dqewxdbfx/image/upload/v1769778473/mudan%C3%A7a_page-0001_xsciz1.jpg",
+        "author": "Redação",
+        "tags": ["Comunicação", "Perspectiva", "Sucesso", "Oportunidade", "Pensamentos", "Habilidade", "Coragem"],
+        "content": `
+<p><strong>MUDAN&Ccedil;AS</strong></p>
+<p>&nbsp;</p>
+<div style="margin: 20px 0; padding: 15px; background: #f0f0f0; border-radius: 8px;">
+  <p><strong>🎧 Áudio da Reflexão</strong></p>
+  <audio controls style="width: 100%; margin-top: 10px;">
+    <source src="mudança.mp3" type="audio/mpeg">
+    Seu navegador não suporta o elemento de áudio.
+  </audio>
+</div>
+
+<p style="color: DARKGOLDENROD"><strong>Eis que,</strong></p>
+<p>&nbsp;</p>
+<p style="color: DARKGOLDENROD"><strong>&ldquo;Muitas pessoas falam em mudar, mas continuam comunicando as mesmas coisas&rdquo;.&nbsp; (Livro: O Poder da A&ccedil;&atilde;o).</strong></p>
+<p style="color: DARKGOLDENROD"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Paulo&nbsp;Vieira</strong></p>
+<p style="color: DARKGOLDENROD"><strong>&nbsp;&nbsp;(Autor e PhD em Coaching).</strong></p>
+<p>&nbsp;</p>
+<p><strong>Em outras palavras, a frase de abertura do tema demonstra a import&acirc;ncia da comunica&ccedil;&atilde;o e do comportamento na mudan&ccedil;a pessoal, expondo que persistir em uma "mesma comunica&ccedil;&atilde;o" (verbal e n&atilde;o verbal) antiga e de forma estagnada impede que as mudan&ccedil;as necess&aacute;rias e reais venham ao encontro do indiv&iacute;duo, perdendo este a chance de conquistar o que deseja.&nbsp;</strong></p>
+<p><br /><br /></p>
+<p style="color: DARKGOLDENROD"><strong>O que nos leva a mudan&ccedil;a, e ela nos traz novas perspectivas?</strong></p>
+<p><br /><br /></p>
+<p><span style="font-weight: 400;">A palavra mudar possui v&aacute;rios significados, pois pode advir da transfer&ecirc;ncia de um lugar para outro quer seja perto ou longe, de uma cidade, estado ou pa&iacute;s, quer seja de forma natural como da inf&acirc;ncia a fase adulta e cada fase com seus desafios, quer seja de ordem religiosa, ou mudan&ccedil;a de trabalho, de carreira, quer seja dentro de casa como a disposi&ccedil;&atilde;o dos m&oacute;veis, quer seja para atingir o sucesso, bem como a mudan&ccedil;a de h&aacute;bitos, oportunidades, e a&iacute; vai.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">E muitas vezes a mudan&ccedil;a est&aacute; ligada a uma insatisfa&ccedil;&atilde;o constante ou aus&ecirc;ncia de interesse em alguma &aacute;rea da vida e sem um motivo aparente, com isso o indiv&iacute;duo sente a sua vida paralisada al&eacute;m de estar acostumado a permanecer na zona de conforto.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">No entanto, muitas vezes pela dificuldade de se autoconhecer o indiv&iacute;duo pensa que o melhor &eacute; ficar na zona de conforto mesmo que as coisas n&atilde;o estejam t&atilde;o corretas, e quem sabe esperando algu&eacute;m para resolver a sua estagna&ccedil;&atilde;o.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">Entretanto, toda a mudan&ccedil;a passa por um processo interno e bem definido conforme descreve o renomado </span><strong>Napole&atilde;o Hill</strong><strong>:</strong></p>
+<p>&nbsp;</p>
+<p style="color: DARKGOLDENROD"><strong>A &ldquo;mudan&ccedil;a&nbsp;&eacute; um processo interno que come&ccedil;a na mente, exigindo a transforma&ccedil;&atilde;o de pensamentos, cren&ccedil;as e atitudes para alterar o destino</strong><span style="font-weight: 400;">&rdquo;.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">Ou seja, a mudan&ccedil;a de mentalidade &eacute; o impulsor interno para converter ideias e desejos em realidades concretas, onde a certeza de vencer precede a vit&oacute;ria.&nbsp;</span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">Quando se pensa em crescimento e busca de novas oportunidades quase sempre as palavras desejo e mudan&ccedil;a est&atilde;o atreladas, pois &eacute; preciso agir em busca do que se quer e para agir &eacute; preciso mudar, deixar muitas vezes as ra&iacute;zes de velhos h&aacute;bitos esses que j&aacute; n&atilde;o se agregam mais ao contexto atual de vida e de crescimento do indiv&iacute;duo.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">Quando o indiv&iacute;duo sente que algo est&aacute; errado com ele pois os resultados de suas a&ccedil;&otilde;es n&atilde;o est&atilde;o a contento e com isso tendem a refletir ao seu redor, ele percebe que deve mudar os rumos da sua hist&oacute;ria e tomar uma atitude en&eacute;rgica para resolver aquilo que julga estar errado, e converter naquilo que julga ser o correto.&nbsp;</span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">Todavia, pode haver uma grande maioria de pessoas contr&aacute;rias as mudan&ccedil;as, mesmo sabendo que elas s&atilde;o necess&aacute;rias em determinado contexto de vida, e por v&aacute;rios motivos felizes ou infelizes das quais vivem, no entanto n&atilde;o a fazem, n&atilde;o fazem essa mudan&ccedil;a porque n&atilde;o acreditam que a m&atilde;o pesada do destino num determinado dia vem bater a sua porta, e perguntar:&nbsp; &ldquo;</span><strong style="color: DARKGOLDENROD">VOC&Ecirc; MUDOU&rdquo; ?&nbsp; E &ldquo;AGORA&rdquo; ?</strong><span style="font-weight: 400;">&nbsp;</span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">E, &eacute; nesse momento o indiv&iacute;duo muito sem gra&ccedil;a olha, pensa e diz:&nbsp; &ldquo;</span><strong style="color: DARKGOLDENROD">POIS &Eacute;!!!</strong><span style="font-weight: 400;">&rdquo;, </span><strong style="color: DARKGOLDENROD">E &ldquo;AGORA&rdquo; ?</strong><span style="font-weight: 400;">&nbsp;&nbsp;&nbsp;</span></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><strong style="color: DARKGOLDENROD">&Eacute; dif&iacute;cil mudar</strong><strong style="color: DARKGOLDENROD">?</strong></p>
+<p><span style="font-weight: 400;">Sim, e muito. Sair da zona de conforto requer habilidade e coragem do indiv&iacute;duo o qual possui um universo enigm&aacute;tico robusto muitas vezes de vit&oacute;rias e fracassos, por&eacute;m &eacute; importante n&atilde;o desistir, buscar o autoconhecimento ou aux&iacute;lio de um profissional para que a mudan&ccedil;a ocorra de forma racional com objetivos e metas bem definidas.&nbsp;</span></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p style="color: DARKGOLDENROD"><strong>E quando preciso mudar rapidamente, por exemplo de cidade, pa&iacute;s ou casa seja para um fim profissional, estudantil, particular e outros?</strong></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">Sim. Nesse momento &eacute; necess&aacute;rio usar bem a sua raz&atilde;o, parar, pensar e conhecer o que se quer, ver o que tem em m&atilde;os, o que est&aacute; a sua volta, tra&ccedil;ar um </span><strong>plano B</strong><span style="font-weight: 400;">, arquitetado, robusto de metas e objetivos para ampar&aacute;-lo nas decis&otilde;es, ter f&eacute; no seu plano, </span><strong>ou seja, entender que mudar faz parte da vida e que resistir a ela quando se faz necess&aacute;ria pode ser uma op&ccedil;&atilde;o prejudicial</strong><span style="font-weight: 400;">, pois &eacute; necess&aacute;rio sentir a </span><strong>mudan&ccedil;a como um meio para aprender e se desenvolver</strong><span style="font-weight: 400;">.&nbsp;</span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">Todavia, &eacute; importante encontrar quais pessoas de confian&ccedil;a se pode buscar para pedir apoio, sugest&otilde;es e que essas sugest&otilde;es possam se alinhar aos objetivos em rumo a mudan&ccedil;a.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">Entretanto, acontecem mudan&ccedil;as que n&atilde;o foram escolhidas pelo indiv&iacute;duo, por&eacute;m devido as circunst&acirc;ncias de vida muitas vezes surgidas quer pelas pr&oacute;prias a&ccedil;&otilde;es ou pelas a&ccedil;&otilde;es de outros a levaram a decis&atilde;o de mudar.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">Mudar significa transformar o indiv&iacute;duo e prepar&aacute;-lo para o mundo.</span></p>
+<p>&nbsp;</p>
+<p><strong>Vejamos o trecho da b&iacute;blia que cita sobre mudan&ccedil;a:</strong></p>
+<h2>&nbsp;</h2>
+<h2><strong>Deuteron&ocirc;mio 31,6:</strong></h2>
+<h2><strong>&uml;Sede fortes e corajosos. N&atilde;o temais, nem vos acovardais diante deles, porque o Senhor vosso Deus est&aacute; convosco&rdquo;.</strong><strong><br /><br /></strong></h2>
+<p><span style="font-weight: 400;">Em outras palavras, a cita&ccedil;&atilde;o b&iacute;blica afirma que a cada passo que avan&ccedil;amos </span><strong>&ldquo;DEUS&rdquo;</strong><span style="font-weight: 400;"> est&aacute; conosco, mesmo quando n&atilde;o temos certeza. Ele nos fortalece e nos guia para enfrentar o novo com f&eacute; e coragem. </span><strong>N&atilde;o estamos desamparados.</strong></p>
+<p><strong><em>Ou seja, </em></strong><strong><em>&ldquo;DEUS&rdquo;, permanece firme presente e amoroso em todas as esta&ccedil;&otilde;es da sua vida</em></strong><strong>.</strong></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">Ent&atilde;o, &eacute; isso</span><span style="font-weight: 400;">. Existe muito assunto para falar sobre o tema, mas no momento fico por aqui.&nbsp;</span></p>
+<p>&nbsp;</p>
+<p><strong>At&eacute; breve!!!</strong></p>
+<p>&nbsp;</p>
+<p><strong>_________________________________________________</strong></p>
+<p><strong>Bibliografia</strong></p>
+<p><span style="font-weight: 400;">HILL, Napoleon.&nbsp;</span><strong>Quem pensa enriquece: o legado oficial e original de 1937</strong><span style="font-weight: 400;">. [S.l.]: Citadel Editora. (Originalmente publicado em 1937).&nbsp;</span><span style="font-weight: 400;">Dispon&iacute;vel em: </span><a href="https://www.pensador.com/frase/NTUyOTU5/"><span style="font-weight: 400;">https://www.pensador.com/frase/NTUyOTU5/</span></a><span style="font-weight: 400;">. Acesso em: 24 de jan.2026.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">VIEIRA, Paulo.&nbsp;</span><strong>O poder da a&ccedil;&atilde;o</strong><span style="font-weight: 400;">: fa&ccedil;a sua vida ideal sair do papel. 1. ed. S&atilde;o Paulo: Editora Gente, 2015.&nbsp;</span></p>
+`},
       {
         "id": 101,
         "category": "reflexoes",
         "categoryName": "Reflexão",
         "date": "20 de janeiro de 2025",
         "readTime": "5 min de leitura",
-        "title": "INTELIGÊNCIA",
+        "title": "Inteligência",
         "excerpt": "Reflexão sobre a inteligência como capacidade de aprender com os erros e recomeçar com mais sabedoria",
         "image": "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=800",
         "author": "Redação",
@@ -1326,7 +1424,7 @@
         "categoryName": "Reflexão",
         "date": "02 de fevereiro de 2025",
         "readTime": "7 min de leitura",
-        "title": "ORGANIZAÇÃO",
+        "title": "Organização",
         "excerpt": "Análise sobre como vivemos em uma sociedade organizacional e a importância da competência nos sistemas",
         "image": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800",
         "author": "Redação",
@@ -1369,7 +1467,7 @@
         "categoryName": "Reflexão",
         "date": "05 de novembro de 2025",
         "readTime": "6 min de leitura",
-        "title": "PENSAMENTOS",
+        "title": "Pensamentos",
         "excerpt": "Reflexão sobre a relação entre pensamentos e sentimentos e a importância da auto-responsabilidade.",
         "image": "https://images.unsplash.com/photo-1493612276216-ee3925520721?w=800",
         "author": "Redação",
@@ -1412,7 +1510,7 @@
         "categoryName": "Reflexão",
         "date": "18 de novembro de 2025",
         "readTime": "6 min de leitura",
-        "title": "RECIPROCIDADE",
+        "title": "Reciprocidade",
         "excerpt": "Análise sobre reciprocidade nas relações humanas e seu significado na convivência em sociedade",
         "image": "https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=800",
         "author": "Redação",
@@ -1476,7 +1574,7 @@
         "categoryName": "Reflexão",
         "date": "01 de dezembro de 2025",
         "readTime": "6 min de leitura",
-        "title": "TOLERÂNCIA",
+        "title": "Tolerancia",
         "excerpt": "Reflexão sobre o desafio da tolerância e como lidar com as diferenças no convívio social",
         "image": "https://images.unsplash.com/photo-1534447677768-be436bb09401?w=800",
         "author": "Redação",
@@ -1557,90 +1655,7 @@
 <p><span style="font-weight: 400;">Walzer Michel. </span><strong>DA TOLERANCIA</strong><span style="font-weight: 400;">/Michel Walzer: tradu&ccedil;&atilde;o Almiro Pisetta. &ndash; S&atilde;o Paulo: Martins Fontes, 1999.</span></p>
 <p>&nbsp;</p>
 <p><strong>TOLER&Acirc;NCIA</strong><span style="font-weight: 400;">. In: DICION&Aacute;RIO Aur&eacute;lio online. [S.l.]: UOL, [entre 2001 e 2025]. Dispon&iacute;vel em:&nbsp;[http://www.dicionariodoaurelio.com/br/toler&acirc;ncia]. Acesso em: 8 nov. 2025.</span></p>`},
-      {
-        "id": 106,
-        "category": "reflexoes",
-        "categoryName": "MUDANÇAS",
-        "date": "24 de janeiro de 2026",
-        "readTime": "10 min de leitura",
-        "title": "MUDANÇAS",
-        "excerpt": " Reflexão sobre a importância de entender a mudança quando necessária como um meio para aprender e se desenvolver recomeçando com mais sabedoria.",
-        "image": "https://res.cloudinary.com/dqewxdbfx/image/upload/v1769778473/mudan%C3%A7a_page-0001_xsciz1.jpg",
-        "author": "Redação",
-        "tags": ["Comunicação", "Perspectiva", "Sucesso", "Oportunidade", "Pensamentos", "Habilidade", "Coragem"],
-        "content": `
-<p><strong>MUDAN&Ccedil;AS</strong></p>
-<p>&nbsp;</p>
-<div style="margin: 20px 0; padding: 15px; background: #f0f0f0; border-radius: 8px;">
-  <p><strong>🎧 Áudio da Reflexão</strong></p>
-  <audio controls style="width: 100%; margin-top: 10px;">
-    <source src="mudança.mp3" type="audio/mpeg">
-    Seu navegador não suporta o elemento de áudio.
-  </audio>
-</div>
-
-<p style="color: DARKGOLDENROD"><strong>Eis que,</strong></p>
-<p>&nbsp;</p>
-<p style="color: DARKGOLDENROD"><strong>&ldquo;Muitas pessoas falam em mudar, mas continuam comunicando as mesmas coisas&rdquo;.&nbsp; (Livro: O Poder da A&ccedil;&atilde;o).</strong></p>
-<p style="color: DARKGOLDENROD"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Paulo&nbsp;Vieira</strong></p>
-<p style="color: DARKGOLDENROD"><strong>&nbsp;&nbsp;(Autor e PhD em Coaching).</strong></p>
-<p>&nbsp;</p>
-<p><strong>Em outras palavras, a frase de abertura do tema demonstra a import&acirc;ncia da comunica&ccedil;&atilde;o e do comportamento na mudan&ccedil;a pessoal, expondo que persistir em uma "mesma comunica&ccedil;&atilde;o" (verbal e n&atilde;o verbal) antiga e de forma estagnada impede que as mudan&ccedil;as necess&aacute;rias e reais venham ao encontro do indiv&iacute;duo, perdendo este a chance de conquistar o que deseja.&nbsp;</strong></p>
-<p><br /><br /></p>
-<p style="color: DARKGOLDENROD"><strong>O que nos leva a mudan&ccedil;a, e ela nos traz novas perspectivas?</strong></p>
-<p><br /><br /></p>
-<p><span style="font-weight: 400;">A palavra mudar possui v&aacute;rios significados, pois pode advir da transfer&ecirc;ncia de um lugar para outro quer seja perto ou longe, de uma cidade, estado ou pa&iacute;s, quer seja de forma natural como da inf&acirc;ncia a fase adulta e cada fase com seus desafios, quer seja de ordem religiosa, ou mudan&ccedil;a de trabalho, de carreira, quer seja dentro de casa como a disposi&ccedil;&atilde;o dos m&oacute;veis, quer seja para atingir o sucesso, bem como a mudan&ccedil;a de h&aacute;bitos, oportunidades, e a&iacute; vai.</span></p>
-<p>&nbsp;</p>
-<p><span style="font-weight: 400;">E muitas vezes a mudan&ccedil;a est&aacute; ligada a uma insatisfa&ccedil;&atilde;o constante ou aus&ecirc;ncia de interesse em alguma &aacute;rea da vida e sem um motivo aparente, com isso o indiv&iacute;duo sente a sua vida paralisada al&eacute;m de estar acostumado a permanecer na zona de conforto.</span></p>
-<p>&nbsp;</p>
-<p><span style="font-weight: 400;">No entanto, muitas vezes pela dificuldade de se autoconhecer o indiv&iacute;duo pensa que o melhor &eacute; ficar na zona de conforto mesmo que as coisas n&atilde;o estejam t&atilde;o corretas, e quem sabe esperando algu&eacute;m para resolver a sua estagna&ccedil;&atilde;o.</span></p>
-<p>&nbsp;</p>
-<p><span style="font-weight: 400;">Entretanto, toda a mudan&ccedil;a passa por um processo interno e bem definido conforme descreve o renomado </span><strong>Napole&atilde;o Hill</strong><strong>:</strong></p>
-<p>&nbsp;</p>
-<p style="color: DARKGOLDENROD"><strong>A &ldquo;mudan&ccedil;a&nbsp;&eacute; um processo interno que come&ccedil;a na mente, exigindo a transforma&ccedil;&atilde;o de pensamentos, cren&ccedil;as e atitudes para alterar o destino</strong><span style="font-weight: 400;">&rdquo;.</span></p>
-<p>&nbsp;</p>
-<p><span style="font-weight: 400;">Ou seja, a mudan&ccedil;a de mentalidade &eacute; o impulsor interno para converter ideias e desejos em realidades concretas, onde a certeza de vencer precede a vit&oacute;ria.&nbsp;</span></p>
-<p>&nbsp;</p>
-<p><span style="font-weight: 400;">Quando se pensa em crescimento e busca de novas oportunidades quase sempre as palavras desejo e mudan&ccedil;a est&atilde;o atreladas, pois &eacute; preciso agir em busca do que se quer e para agir &eacute; preciso mudar, deixar muitas vezes as ra&iacute;zes de velhos h&aacute;bitos esses que j&aacute; n&atilde;o se agregam mais ao contexto atual de vida e de crescimento do indiv&iacute;duo.</span></p>
-<p>&nbsp;</p>
-<p><span style="font-weight: 400;">Quando o indiv&iacute;duo sente que algo est&aacute; errado com ele pois os resultados de suas a&ccedil;&otilde;es n&atilde;o est&atilde;o a contento e com isso tendem a refletir ao seu redor, ele percebe que deve mudar os rumos da sua hist&oacute;ria e tomar uma atitude en&eacute;rgica para resolver aquilo que julga estar errado, e converter naquilo que julga ser o correto.&nbsp;</span></p>
-<p>&nbsp;</p>
-<p><span style="font-weight: 400;">Todavia, pode haver uma grande maioria de pessoas contr&aacute;rias as mudan&ccedil;as, mesmo sabendo que elas s&atilde;o necess&aacute;rias em determinado contexto de vida, e por v&aacute;rios motivos felizes ou infelizes das quais vivem, no entanto n&atilde;o a fazem, n&atilde;o fazem essa mudan&ccedil;a porque n&atilde;o acreditam que a m&atilde;o pesada do destino num determinado dia vem bater a sua porta, e perguntar:&nbsp; &ldquo;</span><strong style="color: DARKGOLDENROD">VOC&Ecirc; MUDOU&rdquo; ?&nbsp; E &ldquo;AGORA&rdquo; ?</strong><span style="font-weight: 400;">&nbsp;</span></p>
-<p>&nbsp;</p>
-<p><span style="font-weight: 400;">E, &eacute; nesse momento o indiv&iacute;duo muito sem gra&ccedil;a olha, pensa e diz:&nbsp; &ldquo;</span><strong style="color: DARKGOLDENROD">POIS &Eacute;!!!</strong><span style="font-weight: 400;">&rdquo;, </span><strong style="color: DARKGOLDENROD">E &ldquo;AGORA&rdquo; ?</strong><span style="font-weight: 400;">&nbsp;&nbsp;&nbsp;</span></p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p><strong style="color: DARKGOLDENROD">&Eacute; dif&iacute;cil mudar</strong><strong style="color: DARKGOLDENROD">?</strong></p>
-<p><span style="font-weight: 400;">Sim, e muito. Sair da zona de conforto requer habilidade e coragem do indiv&iacute;duo o qual possui um universo enigm&aacute;tico robusto muitas vezes de vit&oacute;rias e fracassos, por&eacute;m &eacute; importante n&atilde;o desistir, buscar o autoconhecimento ou aux&iacute;lio de um profissional para que a mudan&ccedil;a ocorra de forma racional com objetivos e metas bem definidas.&nbsp;</span></p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p style="color: DARKGOLDENROD"><strong>E quando preciso mudar rapidamente, por exemplo de cidade, pa&iacute;s ou casa seja para um fim profissional, estudantil, particular e outros?</strong></p>
-<p>&nbsp;</p>
-<p><span style="font-weight: 400;">Sim. Nesse momento &eacute; necess&aacute;rio usar bem a sua raz&atilde;o, parar, pensar e conhecer o que se quer, ver o que tem em m&atilde;os, o que est&aacute; a sua volta, tra&ccedil;ar um </span><strong>plano B</strong><span style="font-weight: 400;">, arquitetado, robusto de metas e objetivos para ampar&aacute;-lo nas decis&otilde;es, ter f&eacute; no seu plano, </span><strong>ou seja, entender que mudar faz parte da vida e que resistir a ela quando se faz necess&aacute;ria pode ser uma op&ccedil;&atilde;o prejudicial</strong><span style="font-weight: 400;">, pois &eacute; necess&aacute;rio sentir a </span><strong>mudan&ccedil;a como um meio para aprender e se desenvolver</strong><span style="font-weight: 400;">.&nbsp;</span></p>
-<p>&nbsp;</p>
-<p><span style="font-weight: 400;">Todavia, &eacute; importante encontrar quais pessoas de confian&ccedil;a se pode buscar para pedir apoio, sugest&otilde;es e que essas sugest&otilde;es possam se alinhar aos objetivos em rumo a mudan&ccedil;a.</span></p>
-<p>&nbsp;</p>
-<p><span style="font-weight: 400;">Entretanto, acontecem mudan&ccedil;as que n&atilde;o foram escolhidas pelo indiv&iacute;duo, por&eacute;m devido as circunst&acirc;ncias de vida muitas vezes surgidas quer pelas pr&oacute;prias a&ccedil;&otilde;es ou pelas a&ccedil;&otilde;es de outros a levaram a decis&atilde;o de mudar.</span></p>
-<p>&nbsp;</p>
-<p><span style="font-weight: 400;">Mudar significa transformar o indiv&iacute;duo e prepar&aacute;-lo para o mundo.</span></p>
-<p>&nbsp;</p>
-<p><strong>Vejamos o trecho da b&iacute;blia que cita sobre mudan&ccedil;a:</strong></p>
-<h2>&nbsp;</h2>
-<h2><strong>Deuteron&ocirc;mio 31,6:</strong></h2>
-<h2><strong>&uml;Sede fortes e corajosos. N&atilde;o temais, nem vos acovardais diante deles, porque o Senhor vosso Deus est&aacute; convosco&rdquo;.</strong><strong><br /><br /></strong></h2>
-<p><span style="font-weight: 400;">Em outras palavras, a cita&ccedil;&atilde;o b&iacute;blica afirma que a cada passo que avan&ccedil;amos </span><strong>&ldquo;DEUS&rdquo;</strong><span style="font-weight: 400;"> est&aacute; conosco, mesmo quando n&atilde;o temos certeza. Ele nos fortalece e nos guia para enfrentar o novo com f&eacute; e coragem. </span><strong>N&atilde;o estamos desamparados.</strong></p>
-<p><strong><em>Ou seja, </em></strong><strong><em>&ldquo;DEUS&rdquo;, permanece firme presente e amoroso em todas as esta&ccedil;&otilde;es da sua vida</em></strong><strong>.</strong></p>
-<p>&nbsp;</p>
-<p><span style="font-weight: 400;">Ent&atilde;o, &eacute; isso</span><span style="font-weight: 400;">. Existe muito assunto para falar sobre o tema, mas no momento fico por aqui.&nbsp;</span></p>
-<p>&nbsp;</p>
-<p><strong>At&eacute; breve!!!</strong></p>
-<p>&nbsp;</p>
-<p><strong>_________________________________________________</strong></p>
-<p><strong>Bibliografia</strong></p>
-<p><span style="font-weight: 400;">HILL, Napoleon.&nbsp;</span><strong>Quem pensa enriquece: o legado oficial e original de 1937</strong><span style="font-weight: 400;">. [S.l.]: Citadel Editora. (Originalmente publicado em 1937).&nbsp;</span><span style="font-weight: 400;">Dispon&iacute;vel em: </span><a href="https://www.pensador.com/frase/NTUyOTU5/"><span style="font-weight: 400;">https://www.pensador.com/frase/NTUyOTU5/</span></a><span style="font-weight: 400;">. Acesso em: 24 de jan.2026.</span></p>
-<p>&nbsp;</p>
-<p><span style="font-weight: 400;">VIEIRA, Paulo.&nbsp;</span><strong>O poder da a&ccedil;&atilde;o</strong><span style="font-weight: 400;">: fa&ccedil;a sua vida ideal sair do papel. 1. ed. S&atilde;o Paulo: Editora Gente, 2015.&nbsp;</span></p>
-`},
+      
     ]
 
 
@@ -1708,7 +1723,6 @@
 <p><br></p>
 <p><strong><span style="color:#806000;font-size:13.999999999999998pt;font-family:'Times New Roman',serif;">►O que significa a isen&ccedil;&atilde;o tribut&aacute;ria?</span></strong></p>
 <p style="text-align: justify;"><span style="font-size:12pt;font-family:'Times New Roman',serif;">Em outras palavras, a isen&ccedil;&atilde;o &eacute; uma modalidade de exclus&atilde;o do cr&eacute;dito tribut&aacute;rio, sendo compreendida como uma dispensa legal do pagamento do tributo. Obrigatoriamente deve ser criada por lei espec&iacute;fica.&nbsp;</span><strong><span style="font-size:12pt;font-family:'Times New Roman',serif;">(Art. 175, CTN).</span></strong></p>
-<p><span style="font-size:12pt;font-family:'Times New Roman',serif;">&nbsp;&nbsp;</span></p>
 <p><br></p>
 <p><strong><span style="color:#806000;font-size:13.999999999999998pt;font-family:'Times New Roman',serif;">►A discrimina&ccedil;&atilde;o detalhada dos valores isentos de Imposto de Renda de acordo com a nova lei n&deg;15.270/2025.</span></strong></p>
 <p><br></p>
@@ -1719,11 +1733,9 @@
 <p style="text-align: justify;"><strong><span style="font-size:12pt;font-family:'Times New Roman',serif;">Obs:&nbsp;</span></strong><strong><u><span style="font-size:12pt;font-family:'Times New Roman',serif;">Lembrando que as novas regras s&atilde;o aplic&aacute;veis tamb&eacute;m ao 13&ordm; sal&aacute;rio</span></u></strong><span style="font-size:12pt;font-family:'Times New Roman',serif;">.&nbsp;</span></p>
 <p><br></p>
 <p><strong><u><span style="color:#806000;font-size:12pt;font-family:'Times New Roman',serif;">Tabela 01</span></u></strong><strong><span style="color:#806000;font-size:12pt;font-family:'Times New Roman',serif;">&nbsp;</span></strong><strong><span style="font-size:12pt;font-family:'Times New Roman',serif;">-&nbsp;</span></strong><strong><u><span style="font-size:12pt;font-family:'Times New Roman',serif;">Regra geral (mensal): &nbsp;</span></u></strong></p>
-<p><br></p>
+
 <p><strong><span style="color:#806000;font-size:12pt;font-family:'Times New Roman',serif;">Remunera&ccedil;&atilde;o mensal &nbsp;- &nbsp; &nbsp;Valores de redu&ccedil;&atilde;o do Imposto</span></strong></p>
-<p><br></p>
-<p><br></p>
-<div align="left">
+<div align="left" style="overflow-x: auto;">
     <table style="border: none; border-collapse: collapse; width: 100%;">
         <tbody>
             <tr>
@@ -1752,20 +1764,19 @@
             </tr>
         </tbody>
     </table>
-</div>
-<p><br></p>
 <p><strong><u><span style="font-size:12pt;font-family:'Times New Roman',serif;">Fonte: Gov.br</span></u></strong></p>
+
 <p><br></p>
 <p style="text-align: justify;"><span style="color:#806000;font-size:12pt;font-family:'Times New Roman',serif;">►</span><span style="font-size:12pt;font-family:'Times New Roman',serif;">Lembrando que a&nbsp;</span><strong><span style="font-size:12pt;font-family:'Times New Roman',serif;">declara&ccedil;&atilde;o de 2026 - ano calend&aacute;rio 2025, segue a regra antiga em vigor.&nbsp;</span></strong></p>
 <p><br></p>
 <p style="text-align: justify;"><span style="color:#806000;font-size:12pt;font-family:'Times New Roman',serif;">►</span><span style="font-size:12pt;font-family:'Times New Roman',serif;">E as novas mudan&ccedil;as na tabela de valores a declarar, abrange a&nbsp;</span><strong><span style="font-size:12pt;font-family:'Times New Roman',serif;">declara&ccedil;&atilde;o de 2027 - ano calend&aacute;rio 2026.&nbsp;</span></strong></p>
 <p><br></p>
-<p><br></p>
+
 <p><strong><u><span style="color:#806000;font-size:12pt;font-family:'Times New Roman',serif;">Tabela 02</span></u></strong><strong><span style="color:#806000;font-size:12pt;font-family:'Times New Roman',serif;">&nbsp;</span></strong><strong><span style="font-size:12pt;font-family:'Times New Roman',serif;">-</span></strong><strong><span style="color:#806000;font-size:12pt;font-family:'Times New Roman',serif;">&nbsp;</span></strong><strong><u><span style="font-size:12pt;font-family:'Times New Roman',serif;">Regra geral (anual): &nbsp;</span></u></strong></p>
-<p><br></p>
+
 <p><strong><span style="color:#806000;font-size:12pt;font-family:'Times New Roman',serif;">Remunera&ccedil;&atilde;o anual &nbsp;- &nbsp; &nbsp;Valores de redu&ccedil;&atilde;o do Imposto</span></strong></p>
-<p><br></p>
-<div align="left">
+
+<div align="left" style="overflow-x: auto;">
     <table style="border: none; border-collapse: collapse; width: 100%;">
         <tbody>
             <tr>
@@ -1794,13 +1805,12 @@
             </tr>
         </tbody>
     </table>
+    <p><strong><u><span style="font-size:12pt;font-family:'Times New Roman',serif;">Fonte: Gov.br</span></u></strong></p>
 </div>
-<p><br></p>
-<p><strong><u><span style="font-size:12pt;font-family:'Times New Roman',serif;">Fonte: Gov.br</span></u></strong></p>
-<p style="text-align: justify;"><br></p>
+
 <p style="text-align: justify;"><span style="color:#ff0000;font-size:12pt;font-family:'Times New Roman',serif;">*</span><strong><span style="font-size:12pt;font-family:'Times New Roman',serif;">R$60.000,01 (</span></strong><strong><span style="color:#806000;font-size:12pt;font-family:'Times New Roman',serif;">R$ 5.000,00 x 12 meses</span></strong><strong><span style="font-size:12pt;font-family:'Times New Roman',serif;">) &nbsp; &nbsp;- &nbsp; &nbsp;R$88.200,00 (</span></strong><strong><span style="color:#806000;font-size:12pt;font-family:'Times New Roman',serif;">R$7.350,00 x 12 meses</span></strong><strong><span style="font-size:12pt;font-family:'Times New Roman',serif;">).</span></strong></p>
 <p style="text-align: justify;"><strong><span style="font-size:12pt;font-family:'Times New Roman',serif;">ↆ</span></strong></p>
-<p><br></p>
+
 <p style="text-align: justify;"><strong><span style="color:#806000;font-size:12pt;font-family:'Times New Roman',serif;">OBS: Em resumo</span></strong><span style="font-size:12pt;font-family:'Times New Roman',serif;">, a isen&ccedil;&atilde;o total do Imposto de Renda da Pessoa F&iacute;sica (IRPF) alcan&ccedil;a quem possui&nbsp;</span><strong><span style="font-size:12pt;font-family:'Times New Roman',serif;">renda anual at&eacute; R$60.000,00</span></strong><span style="font-size:12pt;font-family:'Times New Roman',serif;">. Por&eacute;m, rendas entre&nbsp;</span><strong><span style="font-size:12pt;font-family:'Times New Roman',serif;">R$60.000,01 a R$ 88.200,00 ao ano</span></strong><span style="font-size:12pt;font-family:'Times New Roman',serif;">&nbsp;consta com redu&ccedil;&atilde;o parcial e decrescente do imposto, e acompanha uma f&oacute;rmula matem&aacute;tica para verificar de quanto ser&aacute; o desconto, pois cada contribuinte pode vir a auferir renda diferente um do outro.&nbsp;</span></p>
 <p><br></p>
 <p style="text-align: justify;"><span style="font-size:12pt;font-family:'Times New Roman',serif;">No entanto, para aqueles que a renda anual for maior que&nbsp;</span><strong><span style="font-size:12pt;font-family:'Times New Roman',serif;">R$88.200,01</span></strong><span style="font-size:12pt;font-family:'Times New Roman',serif;">,&nbsp;</span><strong><span style="font-size:12pt;font-family:'Times New Roman',serif;">n&atilde;o haver&aacute;</span></strong><span style="font-size:12pt;font-family:'Times New Roman',serif;">&nbsp;redu&ccedil;&atilde;o e segue o percentual de desconto normal da tabela&nbsp;</span><strong><span style="font-size:12pt;font-family:'Times New Roman',serif;">(al&iacute;quotas de 7,5% a 27,5%)</span></strong><span style="font-size:12pt;font-family:'Times New Roman',serif;">.&nbsp;</span></p>
@@ -1813,12 +1823,11 @@
 <p style="text-align: justify;"><strong><span style="font-size:12pt;font-family:'Times New Roman',serif;">Por isso</span></strong><span style="font-size:12pt;font-family:'Times New Roman',serif;">, para compensar a falta de arrecada&ccedil;&atilde;o devido a isen&ccedil;&atilde;o total e parcial do Imposto de Renda de acordo com os valores mencionados foi criado um novo imposto para aqueles que possui rendimentos elevados, denominado I</span><strong><span style="font-size:12pt;font-family:'Times New Roman',serif;">mposto de Renda de Pessoa F&iacute;sica M&iacute;nimo (IRPFM),</span></strong><span style="font-size:12pt;font-family:'Times New Roman',serif;">&nbsp;com al&iacute;quotas progressivas e ganhos maiores de</span><strong><span style="font-size:12pt;font-family:'Times New Roman',serif;">&nbsp;R$600.000,00&nbsp;</span></strong><strong><u><span style="font-size:12pt;font-family:'Times New Roman',serif;">ao ano</span></u></strong><span style="font-size:12pt;font-family:'Times New Roman',serif;">.</span></p>
 <p><br></p>
 <p style="text-align: justify;"><strong><span style="font-size:12pt;font-family:'Times New Roman',serif;">Ou seja,&nbsp;</span></strong><span style="font-size:12pt;font-family:'Times New Roman',serif;">para renda mensal&nbsp;</span><strong><span style="font-size:12pt;font-family:'Times New Roman',serif;">acima de R$50.000,00&nbsp;</span></strong><strong><u><span style="font-size:12pt;font-family:'Times New Roman',serif;">ao m&ecirc;s</span></u></strong><strong><span style="font-size:12pt;font-family:'Times New Roman',serif;">,&nbsp;</span></strong><span style="font-size:12pt;font-family:'Times New Roman',serif;">ou seja, acima de&nbsp;</span><strong><span style="font-size:12pt;font-family:'Times New Roman',serif;">R$ R$600.000,00&nbsp;</span></strong><strong><u><span style="font-size:12pt;font-family:'Times New Roman',serif;">ao ano</span></u></strong><span style="font-size:12pt;font-family:'Times New Roman',serif;">&nbsp;&eacute; aplicada a al&iacute;quota progressiva</span><strong><span style="font-size:12pt;font-family:'Times New Roman',serif;">&nbsp;</span></strong><strong><u><span style="font-size:12pt;font-family:'Times New Roman',serif;">at&eacute; 10%</span></u></strong><strong><span style="font-size:12pt;font-family:'Times New Roman',serif;">, e significa que&nbsp;</span></strong><strong><span style="background-color:#ffffff;font-size:12pt;font-family:'Times New Roman',serif;">a partir de 01/01/2026</span></strong><span style="background-color:#ffffff;font-size:12pt;font-family:'Times New Roman',serif;">, as retiradas de lucros/dividendos acima &nbsp;</span><strong><span style="background-color:#ffffff;font-size:12pt;font-family:'Times New Roman',serif;">desses valores</span></strong><strong><span style="font-size:12pt;font-family:'Times New Roman',serif;">,&nbsp;</span></strong><span style="font-size:12pt;font-family:'Times New Roman',serif;">quando realizada</span><strong><span style="font-size:12pt;font-family:'Times New Roman',serif;">&nbsp;</span></strong><span style="background-color:#ffffff;font-size:12pt;font-family:'Times New Roman',serif;">por uma mesma pessoa jur&iacute;dica &agrave; mesma pessoa f&iacute;sica ir&aacute; sofrer a reten&ccedil;&atilde;o de&nbsp;</span><strong><span style="background-color:#ffffff;font-size:12pt;font-family:'Times New Roman',serif;">IR na fonte</span></strong><span style="background-color:#ffffff;font-size:12pt;font-family:'Times New Roman',serif;">. Se ultrapassar a esses valores haver&aacute; taxa&ccedil;&atilde;o de&nbsp;</span><strong><span style="background-color:#ffffff;font-size:12pt;font-family:'Times New Roman',serif;">10%</span></strong><span style="background-color:#ffffff;font-size:12pt;font-family:'Times New Roman',serif;">&nbsp;incidente sobre o total ou sobre a parcela que ultrapassar o limite, e podendo fazer a compensa&ccedil;&atilde;o anual.</span></p>
-<p><br></p>
+
 <p style="text-align: justify;"><strong><span style="font-size:12pt;font-family:'Times New Roman',serif;">E, acima de 1,2 milh&otilde;es</span></strong><span style="background-color:#ffffff;font-size:12pt;font-family:'Times New Roman',serif;">&nbsp;-&nbsp;</span><strong><span style="font-size:12pt;font-family:'Times New Roman',serif;">aplica&ccedil;&atilde;o da al&iacute;quota m&iacute;nima efetiva de 10%, quer dizer&nbsp;</span></strong><span style="background-color:#ffffff;font-size:12pt;font-family:'Times New Roman',serif;">&nbsp; que o imposto total pago sobre todos os rendimentos (sal&aacute;rios, lucros, dividendos, alugu&eacute;is), ap&oacute;s todos os descontos deve corresponder a, no m&iacute;nimo&nbsp;</span><strong><span style="background-color:#ffffff;font-size:12pt;font-family:'Times New Roman',serif;">10% (dez por cento), do total recebido</span></strong><span style="background-color:#ffffff;font-size:12pt;font-family:'Times New Roman',serif;">. Se o contribuinte pagar menos que isso atrav&eacute;s das regras normais, a diferen&ccedil;a ser&aacute; cobrada como um adicional de imposto, ent&atilde;o esse contribuinte ter&aacute; que pagar a diferen&ccedil;a para atingir os 10%</span><span style="font-size:12pt;font-family:'Times New Roman',serif;"><br><br></span></p>
-<p><br></p>
+
 <p style="text-align: justify;"><strong><u><span style="color:#806000;font-size:12pt;font-family:'Times New Roman',serif;">Tabela 03</span></u></strong><strong><span style="color:#806000;font-size:12pt;font-family:'Times New Roman',serif;">&nbsp;-&nbsp;</span></strong><strong><u><span style="font-size:12pt;font-family:'Times New Roman',serif;">Vejamos a tabela:</span></u></strong></p>
-<p><br></p>
-<div align="left">
+<div align="left" style="overflow-x: auto;">
     <table style="border: none; border-collapse: collapse; width: 100%;">
         <tbody>
             <tr>
@@ -1839,11 +1848,9 @@
             </tr>
         </tbody>
     </table>
+    <p><strong><u><span style="font-size:12pt;font-family:'Times New Roman',serif;">Fonte: Gov.br</span></u></strong></p>
 </div>
-<p><br></p>
-<p><strong><u><span style="font-size:12pt;font-family:'Times New Roman',serif;">Fonte: Gov.br</span></u></strong></p>
-<p><br></p>
-<p><br></p>
+
 <p style="text-align: justify;"><strong><span style="color:#806000;font-size:13.999999999999998pt;font-family:'Times New Roman',serif;">►E, o que entraria no c&aacute;lculo do novo Imposto de Renda M&iacute;nimo (IRPFM)?</span></strong></p>
 <p><br></p>
 <p style="text-align: justify;"><span style="font-size:12pt;font-family:'Times New Roman',serif;">No c&aacute;lculo do&nbsp;</span><strong><span style="font-size:12pt;font-family:'Times New Roman',serif;">IRPFM</span></strong><span style="font-size:12pt;font-family:'Times New Roman',serif;">, entrariam os sal&aacute;rios; lucros e dividendos; rendimentos de aplica&ccedil;&otilde;es financeiras tribut&aacute;veis.</span></p>
@@ -1851,14 +1858,14 @@
 <p style="text-align: justify;"><strong><span style="color:#806000;font-size:13.999999999999998pt;font-family:'Times New Roman',serif;">►E, o que estaria fora do c&aacute;lculo do novo Imposto de Renda M&iacute;nimo (IRPFM)?</span></strong></p>
 <p><br></p>
 <p style="text-align: justify;"><strong><u><span style="font-size:12pt;font-family:'Times New Roman',serif;">Estariam de fora do c&aacute;lculo do IRPFM</span></u></strong><span style="font-size:12pt;font-family:'Times New Roman',serif;">: poupan&ccedil;a, Letras de Cr&eacute;dito Imobili&aacute;rio (LCI), Letras de Cr&eacute;dito do agroneg&oacute;cio (LCA), fundos imobili&aacute;rios,&nbsp;</span><span style="background-color:#ffffff;font-size:12pt;font-family:'Times New Roman',serif;">o Fiagro (Fundo de Investimento nas Cadeias Produtivas Agroindustriais)&nbsp;</span><span style="font-size:12pt;font-family:'Times New Roman',serif;">&nbsp;e outros investimentos incentivados; &nbsp;heran&ccedil;as e doa&ccedil;&otilde;es; &nbsp;indeniza&ccedil;&otilde;es por doen&ccedil;a grave;</span><span style="font-size:12pt;font-family:'Times New Roman',serif;"><br></span><span style="font-size:12pt;font-family:'Times New Roman',serif;">ganhos de capital na venda de im&oacute;veis, exceto fora da bolsa;</span><span style="font-size:12pt;font-family:'Times New Roman',serif;"><br></span><span style="font-size:12pt;font-family:'Times New Roman',serif;">&nbsp;alugu&eacute;is atrasados, valores recebidos acumuladamente por meio de a&ccedil;&otilde;es judiciais;&nbsp;</span></p>
-<p style="text-align: justify;"><br></p>
+
 <p><br></p>
 <p style="text-align: justify;"><span style="color:#806000;font-size:12pt;font-family:'Times New Roman',serif;">►</span><span style="font-size:12pt;font-family:'Times New Roman',serif;">Lembrando que as mudan&ccedil;as na tabela de valores a declarar, abrange a de</span><strong><span style="font-size:12pt;font-family:'Times New Roman',serif;">clara&ccedil;&atilde;o de 2027 - ano calend&aacute;rio 2026.&nbsp;</span></strong><span style="font-size:12pt;font-family:'Times New Roman',serif;">A&nbsp;</span><strong><span style="font-size:12pt;font-family:'Times New Roman',serif;">declara&ccedil;&atilde;o de 2026 - ano calend&aacute;rio 2025, segue a regra antiga.&nbsp;</span></strong></p>
 <p><br></p>
 <p><strong><u><span style="font-size:12pt;font-family:'Times New Roman',serif;">OBS</span></u></strong><strong><span style="font-size:12pt;font-family:'Times New Roman',serif;">: O governo estima que cerca de 141 mil contribuintes ser&atilde;o afetados.</span></strong></p>
 <p><br></p>
 <p style="text-align: justify;"><span style="font-size:12pt;font-family:'Times New Roman',serif;">Todavia,&nbsp;</span><strong><span style="font-size:12pt;font-family:'Times New Roman',serif;">outra fonte de est&iacute;mulo</span></strong><span style="font-size:12pt;font-family:'Times New Roman',serif;">&nbsp;&agrave; arrecada&ccedil;&atilde;o foi aprovada em&nbsp;</span><strong><span style="font-size:12pt;font-family:'Times New Roman',serif;">02 de dezembro de 2026&nbsp;</span></strong><span style="font-size:12pt;font-family:'Times New Roman',serif;">pela Comiss&atilde;o de Assuntos Econ&ocirc;micos (CAE), o</span><strong><span style="font-size:12pt;font-family:'Times New Roman',serif;">&nbsp;</span></strong><a href="https://www25.senado.leg.br/web/atividade/materias/-/materia/171259"><strong><u><span style="font-size:12pt;font-family:'Times New Roman',serif;">PL 5.473/2025</span></u></strong></a><strong><span style="font-size:12pt;font-family:'Times New Roman',serif;">&nbsp;(Projeto de Lei)</span></strong><span style="font-size:12pt;font-family:'Times New Roman',serif;">, que eleva de forma escalonada a tributa&ccedil;&atilde;o de fintechs,&nbsp;</span><strong><span style="font-size:12pt;font-family:'Times New Roman',serif;">(CSLL),</span></strong><span style="font-size:12pt;font-family:'Times New Roman',serif;">&nbsp;assim como para as bets, em que eleva gradualmente a contribui&ccedil;&atilde;o sobre a receita bruta de Jogos. O projeto de lei altera a&nbsp;</span><a href="https://normas.leg.br/?urn=urn:lex:br:federal:lei:1988-12-15;7689"><strong><u><span style="font-size:12pt;font-family:'Times New Roman',serif;">Lei&nbsp;</span></u></strong><strong><u><span style="color:#0a0a0a;font-size:12pt;font-family:'Times New Roman',serif;">n&ordm;</span></u></strong><strong><u><span style="font-size:12pt;font-family:'Times New Roman',serif;">&nbsp;7.689, de 1988</span></u></strong></a><strong><span style="font-size:12pt;font-family:'Times New Roman',serif;">.</span></strong><span style="font-size:12pt;font-family:'Times New Roman',serif;">&nbsp;(Fonte: Ag&ecirc;ncia Senado).</span></p>
-<p><br></p>
+
 <p><br></p>
 <p style="text-align: justify;"><strong><span style="color:#806000;font-size:13.999999999999998pt;font-family:'Times New Roman',serif;">►E, qual a novidade sobre a famosa tributa&ccedil;&atilde;o de dividendos na fonte, os quais at&eacute; ent&atilde;o eram isentos?</span></strong></p>
 <p><br></p>
@@ -1871,7 +1878,7 @@
 <p style="text-align: justify;"><strong><span style="font-size:12pt;font-family:'Times New Roman',serif;">OBS</span></strong><span style="font-size:12pt;font-family:'Times New Roman',serif;">: de qualquer forma o imposto retido poder&aacute; ser compensado na declara&ccedil;&atilde;o de imposto de renda anual.</span></p>
 <p style="text-align: justify;"><br></p>
 <p style="text-align: justify;"><strong><span style="color:#806000;font-size:13.999999999999998pt;font-family:'Times New Roman',serif;">►A reforma do Imposto de Renda em rela&ccedil;&atilde;o ao novo teto, afetariam as dedu&ccedil;&otilde;es que j&aacute; est&atilde;o programadas na declara&ccedil;&atilde;o?</span></strong></p>
-<p style="text-align: justify;"><br></p>
+
 <p><br></p>
 <p><strong><span style="font-size:12pt;font-family:'Times New Roman',serif;">N&atilde;o. Nada muda</span></strong><span style="font-size:12pt;font-family:'Times New Roman',serif;">&nbsp;nas principais dedu&ccedil;&otilde;es:</span></p>
 <p><br></p>
@@ -1880,7 +1887,6 @@
 <p><span style="font-size:12pt;font-family:'Times New Roman',serif;">Quanto ao&nbsp;</span><strong><span style="font-size:12pt;font-family:'Times New Roman',serif;">desconto simplificado mensal</span></strong><span style="font-size:12pt;font-family:'Times New Roman',serif;">&nbsp;continua de at&eacute;&nbsp;</span><strong><u><span style="font-size:12pt;font-family:'Times New Roman',serif;">R$607,20</span></u></strong><strong><span style="font-size:12pt;font-family:'Times New Roman',serif;">;</span></strong><strong><span style="font-size:12pt;font-family:'Times New Roman',serif;"><br><br></span></strong></p>
 <p><span style="font-size:12pt;font-family:'Times New Roman',serif;">Quanto a&nbsp;</span><strong><span style="font-size:12pt;font-family:'Times New Roman',serif;">educa&ccedil;&atilde;o</span></strong><span style="font-size:12pt;font-family:'Times New Roman',serif;">&nbsp;at&eacute;&nbsp;</span><strong><u><span style="font-size:12pt;font-family:'Times New Roman',serif;">R$3.561,50</span></u></strong><span style="font-size:12pt;font-family:'Times New Roman',serif;">&nbsp;por pessoa ao ano;</span><span style="font-size:12pt;font-family:'Times New Roman',serif;"><br><br></span></p>
 <p><strong><span style="font-size:12pt;font-family:'Times New Roman',serif;">Na declara&ccedil;&atilde;o anual</span></strong><span style="font-size:12pt;font-family:'Times New Roman',serif;">: desconto simplificado de at&eacute;&nbsp;</span><strong><u><span style="font-size:12pt;font-family:'Times New Roman',serif;">R$17.640,00.</span></u></strong></p>
-<p><br></p>
 <p><br></p>
 <p style="text-align: justify;"><span style="font-size:12pt;font-family:'Times New Roman',serif;">Portanto, a reforma do Imposto de Renda trazida pela nova l</span><strong><span style="font-size:12pt;font-family:'Times New Roman',serif;">ei n&deg;15.270/2025</span></strong><span style="font-size:12pt;font-family:'Times New Roman',serif;">, especificamente ao novo teto de desconto de valores, quer seja na isen&ccedil;&atilde;o total ou quer seja de forma parcial, sem d&uacute;vida &eacute; muito bem-vinda,&nbsp;</span><strong><span style="font-size:12pt;font-family:'Times New Roman',serif;">e se constitui num marco hist&oacute;rico para o Brasil</span></strong><span style="font-size:12pt;font-family:'Times New Roman',serif;">, porque al&eacute;m de trazer um al&iacute;vio no bolso de milh&otilde;es de brasileiros, principalmente em meio a tantas distor&ccedil;&otilde;es salariais, ao mesmo tempo traz um incentivo &agrave; circula&ccedil;&atilde;o de moedas impulsionando a economia.</span></p>
 <p><br></p>
@@ -1891,7 +1897,7 @@
 <p><br></p>
 <p><br></p>
 <p style="text-align: justify;"><strong><u><span style="font-size:13.999999999999998pt;font-family:'Times New Roman',serif;">Refer&ecirc;ncias</span></u></strong></p>
-<p style="text-align: justify;"><span style="background-color:#ffffff;font-size:12pt;font-family:'Times New Roman',serif;">BRASIL.&nbsp;</span><a href="https://legislacao.planalto.gov.br/legisla/legislacao.nsf/viwTodos/509f2321d97cd2d203256b280052245a?OpenDocument&Highlight=1,constitui%C3%A7%C3%A3o&AutoFramed"><strong><span style="background-color:#ffffff;font-size:12pt;font-family:'Times New Roman',serif;">Constitui&ccedil;&atilde;o da Rep&uacute;blica Federativa do Brasil de 1988</span></strong></a><span style="font-size:12pt;font-family:'Times New Roman',serif;">. dispon&iacute;vel em&nbsp;</span><a href="https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"><u><span style="color:#0000ff;font-size:12pt;font-family:'Times New Roman',serif;">https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm</span></u></a><strong><span style="font-size:12pt;font-family:'Times New Roman',serif;">.</span></strong><span style="font-size:12pt;font-family:'Times New Roman',serif;">&nbsp;Acesso em 20 fev. 2026.</span></p>
+<p style="text-align: justify;"><span style="background-color:#ffffff;font-size:12pt;font-family:'Times New Roman',serif;">BRASIL.&nbsp;</span><a href="https://legislacao.planalto.gov.br/legisla/legislacao.nsf/viwTodos/509f2321d97cd2d203256b280052245a?OpenDocument&Highlight=1,constitui%C3%A7%C3%A3o&AutoFramed"><strong><span style="background-color:#ffffff;font-size:12pt;font-family:'Times New Roman',serif;">Constitui&ccedil;&atilde;o da Rep&uacute;blica Federativa do Brasil de 1988</span></strong></a><span style="font-size:12pt;font-family:'Times New Roman',serif;">. dispon&iacute;vel em&nbsp;</span><a href="https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"><u><span style="color:#0000ff;font-size:12pt;font-family:'Times New Roman',serif;">https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm</span></u></a><strong><span style="font-size:12pt;font-family:'Times New Roman',serif;">.</span></strong><span style="font-size:12pt;font-family:'Times New Roman',serif;">Acesso em 20 fev. 2026.</span></p>
 <h1 style="text-align: justify;"><br></h1>
 <h1 style="text-align: justify;"><span style="background-color:#ffffff;font-size:12pt;font-family:'Times New Roman',serif;">BRASIL</span><strong><span style="background-color:#ffffff;font-size:12pt;font-family:'Times New Roman',serif;">.&nbsp;</span></strong><strong><span style="font-size:12pt;font-family:'Times New Roman',serif;">&nbsp;Receita divulga nova tabela do IRPF com as mudan&ccedil;as ap&oacute;s isen&ccedil;&atilde;o para quem ganha at&eacute; R$ 5 mil.&nbsp;</span></strong><a href="https://www.gov.br/fazenda/pt-br/assuntos/noticias/2026/janeiro/receita-divulga-nova-tabela-do-irpf-com-as-mudancas-apos-isencao-para-quem-ganha-ate-r-5-mil.%20"><u><span style="color:#0000ff;font-size:12pt;font-family:'Times New Roman',serif;">https://www.gov.br/fazenda/pt-br/assuntos/noticias/2026/janeiro/receita-divulga-nova-tabela-do-irpf-com-as-mudancas-apos-isencao-para-quem-ganha-ate-r-5-mil.&nbsp;</span></u></a><span style="font-size:12pt;font-family:'Times New Roman',serif;">Acesso em 20 fev. 2026.</span></h1>
 <p style="text-align: justify;"><span style="background-color:#ffffff;font-size:12pt;font-family:'Times New Roman',serif;">BRASIL.&nbsp;</span><span style="font-size:12pt;font-family:'Times New Roman',serif;">&nbsp;</span><strong><span style="font-size:12pt;font-family:'Times New Roman',serif;">Sancionada isen&ccedil;&atilde;o do Imposto de Renda para quem ganha at&eacute; R$ 5 mil por m&ecirc;s</span></strong><span style="font-size:12pt;font-family:'Times New Roman',serif;">.&nbsp;</span><a href="https://www12.senado.leg.br/noticias/materias/2025/11/27/sancionada-isencao-do-imposto-de-renda-para-quem-ganha-ate-r-5-mil-por-mes#:~:text=O%20presidente%20da%20Rep%C3%BAblica%2C%20Luiz,R%24%205%20mil%20por%20m%C3%AAs"><u><span style="color:#0000ff;font-size:12pt;font-family:'Times New Roman',serif;">https://www12.senado.leg.br/noticias/materias/2025/11/27/sancionada-isencao-do-imposto-de-renda-para-quem-ganha-ate-r-5-mil-por-mes#:~:text=O%20presidente%20da%20Rep%C3%BAblica%2C%20Luiz,R%24%205%20mil%20por%20m%C3%AAs</span></u></a><span style="font-size:12pt;font-family:'Times New Roman',serif;">.</span><strong><span style="font-size:12pt;font-family:'Times New Roman',serif;">&nbsp;</span></strong><span style="font-size:12pt;font-family:'Times New Roman',serif;">&nbsp;Acesso em 20 fev. 2026.</span></p>
@@ -3929,8 +3935,8 @@
         "categoryName": "Direito Constitucional",
         "date": "27 de maio de 2025",
         "readTime": "20 min de leitura",
-        "title": "GRATUIDADE  DE JUSTIÇA I",
-        "excerpt": "Análise  de Gratuidade da Justiça, seus princípios, instrumentos constitucionais e a importância como um direito e garantia fundamental previsto na CF/88.",
+        "title": "Gratuidade de Justiça I",
+        "excerpt": "Análise  de Gratuidade de Justiça, seus princípios, instrumentos constitucionais e a importância como um direito e garantia fundamental previsto na CF/88.",
         "image": "https://res.cloudinary.com/dqewxdbfx/image/upload/v1762626064/natureza-morta-de-moedas-de-dolar-em-escala_page-0001_dgbhfz.jpg",
         "author": "Redação",
 
@@ -4067,8 +4073,8 @@
         "categoryName": "Direito Constitucional",
         "date": "27 de maio de 2025",
         "readTime": "20 min de leitura",
-        "title": "GRATUIDADE DE JUSTIÇA II",
-        "excerpt": "Análise  de Gratuidade da Justiça, seus princípios, instrumentos constitucionais e a importância como um direito e garantia fundamental previsto na CF/88.",
+        "title": "Gratuidade de Justiça II",
+        "excerpt": "Análise  de Gratuidade de Justiça, seus princípios, instrumentos constitucionais e a importância como um direito e garantia fundamental previsto na CF/88.",
         "image": "https://res.cloudinary.com/dqewxdbfx/image/upload/v1762626064/natureza-morta-de-moedas-de-dolar-em-escala_page-0001_dgbhfz.jpg",
         "author": "Redação",
 
@@ -4453,7 +4459,7 @@
         "categoryName": "Direito Constitucional",
         "date": "30 de julho de 2025",
         "readTime": "20 min de leitura",
-        "title": "ORDEM SOCIAL - SEGURIDADE SOCIAL",
+        "title": "Ordem Social - Seguridade Social",
         "excerpt": "Análise dos princípios e fundamentos da Seguridade Social no contexto da Ordem Social.",
         "image": "https://res.cloudinary.com/dqewxdbfx/image/upload/v1762627650/vista-superior-de-uma-bela-familia-em-casa-natureza-morta_fev3wk.jpg",
         "author": "Redação",
@@ -4808,7 +4814,7 @@
         "categoryName": "Direito Constitucional",
         "date": "30 de julho de 2025",
         "readTime": "20 min de leitura",
-        "title": "ORDEM SOCIAL - ASSISTÊNCIA SOCIAL",
+        "title": "Ordem Social - Assistência Social",
         "excerpt": "A Assistência Social como instrumento de efetivação da Ordem Social.",
         "image": "https://res.cloudinary.com/dqewxdbfx/image/upload/v1762627862/desenho-sobre-profissao-de-advogado_fkt0ta.jpg",
         "author": "Redação",
@@ -4928,7 +4934,7 @@
         "categoryName": "Direito Constitucional",
         "date": "07 de junho de 2025",
         "readTime": "20 min de leitura",
-        "title": "ORDEM ECONÔMICA E FINANCEIRA",
+        "title": "Ordem Econômica e Financeira",
         "excerpt": "Análise da ordem econômica e financeira no contexto constitucional brasileiro.",
         "image": "https://res.cloudinary.com/dqewxdbfx/image/upload/v1762628140/calculadora-de-vista-superior-e-arranjo-de-dinheiro_fnryr8.jpg",
         "author": "Redação",
@@ -5275,7 +5281,7 @@
         "categoryName": "Direito TRIBUTÁRIO",
         "date": "07 de abril de 2025",
         "readTime": "20 min de leitura",
-        "title": "COMPETÊNCIA TRIBUTÁRIA",
+        "title": "Competência Tributária",
         "excerpt": "Análise da competência tributária e sua repartição entre os entes federativos",
         "image": "https://res.cloudinary.com/dqewxdbfx/image/upload/v1762628259/pessoas-de-pe-encostadas-a-mesa-trabalhando_ifl7lf.jpg",
         "author": "Redação",
@@ -5339,7 +5345,7 @@
         "categoryName": "Direito Constitucional",
         "date": "27 de julho de 2025",
         "readTime": "20 min de leitura",
-        "title": "ORDEM SOCIAL - SAÚDE",
+        "title": "Ordem Social - Saúde",
         "excerpt": "Análise do direito à saúde como pilar da ordem social brasileira.",
         "image": "https://res.cloudinary.com/dqewxdbfx/image/upload/v1761963664/pexels-pixabay-40568_iul6q0.jpg",
         "author": "Redação",
@@ -5606,7 +5612,7 @@
         "categoryName": "Direito previdenciário",
         "date": "06 de outubro de 2025",
         "readTime": "20 min de leitura",
-        "title": "AUXÍLIO-RECLUSÃO",
+        "title": "Auxílio-Reclusão",
         "excerpt": "Análise jurídica e social do benefício de auxílio-reclusão no Brasil.",
         "image": "https://res.cloudinary.com/dqewxdbfx/image/upload/v1762628689/close-up-disponivel-usando-algemas-na-prisao_tzo0sj.jpg",
         "author": "Redação",
@@ -6268,7 +6274,7 @@
         "categoryName": "Notícias",
         "date": "17 de dezembro de 2025",
         "readTime": "1 min de leitura",
-        "title": "ISENÇÃO DO IPVA",
+        "title": "Isenção do IPVA",
         "excerpt": "Congresso Nacional promulga emenda constitucional que concede imunidade do IPVA para veículos com mais de duas décadas de fabricação.",
         "image": "https://res.cloudinary.com/dqewxdbfx/image/upload/v1766010595/car-model-calculator-coins-white-table_dug4hd.jpg",
         "author": "Redação",
@@ -6296,13 +6302,13 @@
       },
 
 
-      {
+      { 
         "id": 19,
         "category": "trabalhista",
         "categoryName": "Direito do Trabalho",
         "date": "10 de dezembro de 2025",
         "readTime": "8 min de leitura",
-        "title": "APROVADO O FIM DA ESCALA DE TRABALHO 6X1 PELA CCJ DO SENADO FEDERAL",
+        "title": "Aprovado o fim da escala de trabalho 6x1 pela CCJ do Senado Federal",
         "excerpt": "Comissão de Constituição e Justiça do Senado aprova PEC que extingue a escala 6x1 e reduz progressivamente a jornada de trabalho de 44 para 36 horas semanais.",
         "image": "leagal.jpg",
         "author": "Redação",
@@ -6365,7 +6371,7 @@
         "categoryName": "Previdenciário",
         "date": "02 de fevereiro de 2026",
         "readTime": "5 min de leitura",
-        "title": "Retorno dos serviços após atualização dos sistemas.",
+        "title": "Retorno dos serviços do INSS após atualização dos sistemas.",
         "excerpt": "INSS -  Os serviços do INSS voltam a funcionar nesta segunda-feira, dia 02 de fevereiro de 2026, após passarem por uma atualização no sistema desde o dia 28 de janeiro (quarta-feira) até 01 de fevereiro (domingo), cuja atualização foi concluída com êxito.",
         "image": "https://res.cloudinary.com/dqewxdbfx/image/upload/v1770487785/Como-consultar-o-Meu-INSS_a2pzkg.webp",
         "author": "Redação",
@@ -6693,6 +6699,18 @@
       enableLazyImages(reflexoesContainer);
 
       renderReflexoesPagination();
+
+      // Atualizar widget "Mais lidos" para reflexões
+      const maisLidosReflexoesWidget = document.querySelector('#reflexoesContainer').nextElementSibling.querySelector('ol');
+      if (maisLidosReflexoesWidget) {
+        const popularReflexoes = [...reflexoes].sort((a, b) => new Date(b.date) - new Date(a.date)).slice(0, 3);
+        maisLidosReflexoesWidget.innerHTML = popularReflexoes.map((reflexao, index) => `
+          <li><a href="javascript:void(0);" onclick="openArticle(${reflexao.id}); return false;">
+            <span class="category ${reflexao.category}" style="font-size:10px;padding:2px 6px">${reflexao.categoryName.split(' ')[0]}</span> 
+            ${reflexao.title}
+          </a></li>
+        `).join('');
+      }
     }
 
     // Função para renderizar a paginação das reflexões
@@ -6777,6 +6795,18 @@
       enableLazyImages(noticiasContainer);
 
       renderNoticiasPagination();
+
+      // Atualizar widget "Mais lidos" para notícias
+      const maisLidosNoticiasWidget = document.querySelector('#noticiasContainer').nextElementSibling.querySelector('ol');
+      if (maisLidosNoticiasWidget) {
+        const popularNoticias = [...noticias].sort((a, b) => new Date(b.date) - new Date(a.date)).slice(0, 3);
+        maisLidosNoticiasWidget.innerHTML = popularNoticias.map((noticia, index) => `
+          <li><a href="javascript:void(0);" onclick="openArticle(${noticia.id}); return false;">
+            <span class="category ${noticia.category}" style="font-size:10px;padding:2px 6px">${noticia.categoryName.split(' ')[0]}</span> 
+            ${noticia.title}
+          </a></li>
+        `).join('');
+      }
     }
 
     // Função para renderizar a paginação das notícias
