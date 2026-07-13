@@ -2,7 +2,7 @@ User-agent: *
 Disallow:
 
 # Point to sitemap
-Sitemap: https://fatimafelipe.com.br/sitemap.xml
+Sitemap: https://fatimafelippe.com.br/sitemap.xml
 
 # Allow Googlebot to access JS/CSS
 User-agent: Googlebot
