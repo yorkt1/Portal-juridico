@@ -6736,6 +6736,114 @@
     let currentNoticiasPage = 1;
 
     // Helper para escapar HTML (segurança)
+    // ---- URLs estaticas dos artigos (paginas em /artigo/*.html) ----
+    const ARTICLE_SLUGS = {
+      1: "curatela-instrumento-de-protecao-e-cuidado-no-ordenamento-juridico",
+      2: "tutela-protecao-integral-de-menores-no-ordenamento-juridico-brasileiro",
+      3: "orcamento-publico-i",
+      4: "orcamento-publico-ii",
+      5: "acao-declaratoria-de-constitucionalidade",
+      6: "obrigacao-tributaria",
+      7: "dos-atos-processuais",
+      8: "tcc-especializacao-processo-civil",
+      9: "gratuidade-de-justica-i",
+      10: "o-estado-brasileiro",
+      11: "ordem-social-seguridade-social",
+      12: "ordem-economica-e-financeira",
+      13: "competencia-tributaria",
+      14: "ordem-social-saude",
+      15: "auxilio-reclusao",
+      16: "dia-do-advogado-a-importancia-e-historia-da-advocacia-no-brasil",
+      17: "ordem-social-assistencia-social",
+      18: "dom-pedro-i",
+      19: "aprovado-o-fim-da-escala-de-trabalho-6x1-pela-ccj-do-senado-federal",
+      20: "taxa-de-licenciamento-anual-crlv-e",
+      21: "retorno-dos-servicos-do-inss-apos-atualizacao-dos-sistemas",
+      46: "proposta-de-emenda-a-constituicao-pec-03-2026-altera-o-art-155-da",
+      80: "isencao-do-ipva",
+      99: "gratuidade-de-justica-ii",
+      101: "inteligencia",
+      102: "organizacao",
+      103: "pensamentos",
+      104: "reciprocidade",
+      105: "tolerancia",
+      106: "mudancas",
+      107: "o-poder-da-vontade",
+      333: "isencao-do-imposto-de-renda-lei-n-15-270-2025-novo-teto",
+      334: "antecipacao-do-abono-anual-13-salario-do-inss",
+      337: "proposta-de-emenda-a-constituicao-pec-19-2024-profissionais-da-saude"
+    };
+    function articleUrl(id) {
+      const slug = ARTICLE_SLUGS[id];
+      return slug ? 'artigo/' + slug + '.html' : '#';
+    }
+
+    const SITE_URL = 'https://fatimafelippe.com.br';
+
+    // URL publica e canonica do artigo, usada ao compartilhar.
+    function articleShareUrl(id) {
+      const slug = ARTICLE_SLUGS[id];
+      return slug ? SITE_URL + '/artigo/' + slug + '.html' : SITE_URL + '/';
+    }
+
+    function copiarLinkArtigo(e, url) {
+      e.preventDefault();
+      if (navigator.clipboard) navigator.clipboard.writeText(url);
+      const el = e.currentTarget;
+      const antes = el.textContent;
+      el.textContent = '\u2714';
+      setTimeout(() => { el.textContent = antes; }, 1200);
+    }
+
+    // ---- Busca ----
+    let searchQuery = '';
+
+    function normalizarTexto(t) {
+      return (t || '').toString()
+        .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+        .toLowerCase();
+    }
+
+    function matchesQuery(item) {
+      if (!searchQuery) return true;
+      const alvo = normalizarTexto([
+        item.title, item.excerpt, item.categoryName,
+        (item.tags || []).join(' ')
+      ].join(' '));
+      return searchQuery.split(/\s+/).filter(Boolean)
+        .every(termo => alvo.includes(termo));
+    }
+
+    function semResultados(container, rotulo) {
+      container.innerHTML =
+        '<p style="color:var(--muted);padding:8px 0">Nenhum resultado em ' +
+        rotulo + ' para <strong>' + escapeHtml(searchQuery) + '</strong>.</p>';
+    }
+
+    function aplicarBusca(termo, atualizarUrl) {
+      searchQuery = normalizarTexto(termo).trim();
+      currentPage = 1;
+      currentReflexoesPage = 1;
+      currentNoticiasPage = 1;
+
+      renderPosts();
+      renderPagination();
+      renderReflexoes();
+      renderNoticias();
+
+      if (atualizarUrl && window.history && window.history.replaceState) {
+        const url = searchQuery
+          ? window.location.pathname + '?s=' + encodeURIComponent(termo.trim())
+          : window.location.pathname;
+        window.history.replaceState(null, '', url);
+      }
+      if (searchQuery) {
+        const alvo = document.getElementById('postsContainer');
+        if (alvo) alvo.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+      toggleMobileMenu(false);
+    }
+
     function escapeHtml(unsafe) {
       if (!unsafe) return '';
       return String(unsafe)
@@ -6755,8 +6863,11 @@
 
     function getFilteredPosts() {
       const latest = getLatestPost();
-      if (!latest) return [...posts];
-      return posts.filter(post => post.id !== latest.id);
+      // Durante a busca o destaque tambem entra na lista, para nao sumir.
+      const base = (!latest || searchQuery)
+        ? [...posts]
+        : posts.filter(post => post.id !== latest.id);
+      return base.filter(matchesQuery);
     }
 
     function renderMainContent() {
@@ -6772,7 +6883,7 @@
           <img src="${latestPost.image}" alt="${latestPost.title}">
           <h1>${latestPost.title}</h1>
           <p class="excerpt">${latestPost.excerpt}</p>
-          <div style="margin-top:12px"><a href="#" class="btn primary" onclick="openArticle(${latestPost.id}, event)">Leia na íntegra</a></div>
+          <div style="margin-top:12px"><a href="${articleUrl(latestPost.id)}" class="btn primary" onclick="openArticle(${latestPost.id}, event)">Leia na íntegra</a></div>
         `;
       }
 
@@ -6824,7 +6935,7 @@
         const popularPosts = [...posts].sort((a, b) => new Date(b.date) - new Date(a.date)).slice(0, 3);
 
         maisLidosWidget.innerHTML = popularPosts.map((post, index) => `
-          <li><a href="javascript:void(0);" onclick="openArticle(${post.id}); return false;">
+          <li><a href="${articleUrl(post.id)}" onclick="openArticle(${post.id}); return false;">
             <span class="category ${post.category}" style="font-size:10px;padding:2px 6px">${post.categoryName.split(' ')[0]}</span> 
             ${post.title}
           </a></li>
@@ -6841,6 +6952,10 @@
       const startIndex = (currentPage - 1) * postsPerPage;
       const endIndex = startIndex + postsPerPage;
       const filtered = getFilteredPosts();
+      if (searchQuery && filtered.length === 0) {
+        semResultados(postsContainer, 'Artigos');
+        return;
+      }
       const postsToShow = filtered.slice(startIndex, endIndex);
 
       // Gerar HTML para cada postagem
@@ -6852,7 +6967,7 @@
             <div class="category ${post.category}">${post.categoryName}</div>
             <div class="meta">${post.date} • ${post.readTime}</div>
             <img data-src="${post.image}" loading="lazy" alt="post">
-            <h3><a href="javascript:void(0);" onclick="openArticle(${post.id}); return false;">${post.title}</a></h3>
+            <h3><a href="${articleUrl(post.id)}" onclick="openArticle(${post.id}); return false;">${post.title}</a></h3>
             <p class="excerpt">${post.excerpt}</p>
           </div>
         `;
@@ -6986,7 +7101,13 @@
 
       const startIndex = (currentReflexoesPage - 1) * reflexoesPerPage;
       const endIndex = startIndex + reflexoesPerPage;
-      const reflexoesToShow = reflexoes.slice(startIndex, endIndex);
+      const reflexoesFiltradas = reflexoes.filter(matchesQuery);
+      if (searchQuery && reflexoesFiltradas.length === 0) {
+        semResultados(reflexoesContainer, 'Reflexões');
+        renderReflexoesPagination();
+        return;
+      }
+      const reflexoesToShow = reflexoesFiltradas.slice(startIndex, endIndex);
 
       reflexoesToShow.forEach(reflexao => {
         const reflexaoElement = document.createElement('article');
@@ -6996,7 +7117,7 @@
             <div class="category ${reflexao.category}">${reflexao.categoryName}</div>
             <div class="meta">${reflexao.date} • ${reflexao.readTime}</div>
             <img data-src="${reflexao.image}" loading="lazy" alt="reflexão">
-            <h3><a href="javascript:void(0);" onclick="openArticle(${reflexao.id}); return false;">${reflexao.title}</a></h3>
+            <h3><a href="${articleUrl(reflexao.id)}" onclick="openArticle(${reflexao.id}); return false;">${reflexao.title}</a></h3>
             <p class="excerpt">${reflexao.excerpt}</p>
           </div>
         `;
@@ -7013,7 +7134,7 @@
       if (maisLidosReflexoesWidget) {
         const popularReflexoes = [...reflexoes].sort((a, b) => new Date(b.date) - new Date(a.date)).slice(0, 3);
         maisLidosReflexoesWidget.innerHTML = popularReflexoes.map((reflexao, index) => `
-          <li><a href="javascript:void(0);" onclick="openArticle(${reflexao.id}); return false;">
+          <li><a href="${articleUrl(reflexao.id)}" onclick="openArticle(${reflexao.id}); return false;">
             <span class="category ${reflexao.category}" style="font-size:10px;padding:2px 6px">${reflexao.categoryName.split(' ')[0]}</span> 
             ${reflexao.title}
           </a></li>
@@ -7030,7 +7151,7 @@
       }
       paginationContainer.innerHTML = '';
 
-      const totalPages = Math.ceil(reflexoes.length / reflexoesPerPage);
+      const totalPages = Math.ceil(reflexoes.filter(matchesQuery).length / reflexoesPerPage);
 
       const prevButton = document.createElement('a');
       prevButton.className = 'btn';
@@ -7082,7 +7203,13 @@
 
       const startIndex = (currentNoticiasPage - 1) * noticiasPerPage;
       const endIndex = startIndex + noticiasPerPage;
-      const noticiasToShow = noticias.slice(startIndex, endIndex);
+      const noticiasFiltradas = noticias.filter(matchesQuery);
+      if (searchQuery && noticiasFiltradas.length === 0) {
+        semResultados(noticiasContainer, 'Notícias');
+        renderNoticiasPagination();
+        return;
+      }
+      const noticiasToShow = noticiasFiltradas.slice(startIndex, endIndex);
 
       noticiasToShow.forEach(noticia => {
         const noticiaElement = document.createElement('article');
@@ -7092,7 +7219,7 @@
             <div class="category ${noticia.category}">${escapeHtml(noticia.categoryName)}</div>
             <div class="meta">${escapeHtml(noticia.date)} • ${escapeHtml(noticia.readTime)}</div>
             <img data-src="${noticia.image}" loading="lazy" alt="notícia">
-            <h3><a href="javascript:void(0);" onclick="openArticle(${noticia.id}); return false;">${escapeHtml(noticia.title)}</a></h3>
+            <h3><a href="${articleUrl(noticia.id)}" onclick="openArticle(${noticia.id}); return false;">${escapeHtml(noticia.title)}</a></h3>
             <p class="excerpt">${escapeHtml(noticia.excerpt)}</p>
           </div>
         `;
@@ -7109,7 +7236,7 @@
       if (maisLidosNoticiasWidget) {
         const popularNoticias = [...noticias].sort((a, b) => new Date(b.date) - new Date(a.date)).slice(0, 3);
         maisLidosNoticiasWidget.innerHTML = popularNoticias.map((noticia, index) => `
-          <li><a href="javascript:void(0);" onclick="openArticle(${noticia.id}); return false;">
+          <li><a href="${articleUrl(noticia.id)}" onclick="openArticle(${noticia.id}); return false;">
             <span class="category ${noticia.category}" style="font-size:10px;padding:2px 6px">${noticia.categoryName.split(' ')[0]}</span> 
             ${noticia.title}
           </a></li>
@@ -7126,7 +7253,7 @@
       }
       paginationContainer.innerHTML = '';
 
-      const totalPages = Math.ceil(noticias.length / noticiasPerPage);
+      const totalPages = Math.ceil(noticias.filter(matchesQuery).length / noticiasPerPage);
 
       const prevButton = document.createElement('a');
       prevButton.className = 'btn';
@@ -7189,9 +7316,9 @@
           <div class="article-meta">
             <div class="meta">${post.date} • por ${post.author} • ${post.readTime}</div>
             <div class="meta">Compartilhar: 
-              <a href="#" style="margin-left: 5px;">📱</a>
-              <a href="#" style="margin-left: 5px;">📧</a>
-              <a href="#" style="margin-left: 5px;">🔗</a>
+              <a href="https://wa.me/?text=${encodeURIComponent(post.title + ' ' + articleShareUrl(post.id))}" target="_blank" rel="noopener" aria-label="Compartilhar no WhatsApp" style="margin-left: 5px;">📱</a>
+              <a href="mailto:?subject=${encodeURIComponent(post.title)}&amp;body=${encodeURIComponent(articleShareUrl(post.id))}" aria-label="Compartilhar por e-mail" style="margin-left: 5px;">📧</a>
+              <a href="${articleUrl(post.id)}" onclick="copiarLinkArtigo(event, '${articleShareUrl(post.id)}'); return false;" aria-label="Copiar link do artigo" style="margin-left: 5px;">🔗</a>
             </div>
           </div>
           <h2>${post.title}</h2>
@@ -7262,17 +7389,21 @@
     // Funções auxiliares
     function doSearch() {
       const q = document.getElementById('searchBox').value.trim();
-      if (!q) { alert('Digite algo para pesquisar'); return }
-      alert('Pesquisa simulada: "' + q + '" — implementar busca no backend.');
-
-      // Fechar menu mobile após pesquisa
-      toggleMobileMenu(false);
+      aplicarBusca(q, true);
     }
 
     function subscribe() {
       const em = document.getElementById('email').value.trim();
-      if (!em) { alert('Digite um email válido'); return }
-      alert('Inscrição simulada para: ' + em);
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(em)) {
+        alert('Digite um e-mail válido.');
+        return;
+      }
+      // Sem backend de newsletter: encaminha o pedido por e-mail.
+      const assunto = encodeURIComponent('Quero receber as novidades do Portal Jurídico');
+      const corpo = encodeURIComponent(
+        'Olá, gostaria de receber as novidades do portal.\n\nMeu e-mail: ' + em);
+      window.location.href =
+        'mailto:fatimafelippe7.adv@gmail.com?subject=' + assunto + '&body=' + corpo;
     }
 
     // Inicializar a página
@@ -7284,6 +7415,25 @@
       // Deferir renderização de seções menos críticas até que fiquem próximas ao viewport
       deferRenderOnView('reflexoesContainer', renderReflexoes);
       deferRenderOnView('noticiasContainer', renderNoticias);
+
+      // Busca vinda da URL (?s=termo) - torna real o SearchAction do schema
+      const termoUrl = new URLSearchParams(window.location.search).get('s');
+      if (termoUrl) {
+        const caixa = document.getElementById('searchBox');
+        if (caixa) caixa.value = termoUrl;
+        aplicarBusca(termoUrl, false);
+      }
+
+      // Enter dispara a busca
+      const caixaBusca = document.getElementById('searchBox');
+      if (caixaBusca) {
+        caixaBusca.addEventListener('keydown', e => {
+          if (e.key === 'Enter') { e.preventDefault(); doSearch(); }
+        });
+        caixaBusca.addEventListener('search', () => {
+          if (!caixaBusca.value.trim()) aplicarBusca('', true);
+        });
+      }
 
       // Começar a observar imagens lazy em toda a página (side-cards, posts)
       enableLazyImages();
